@@ -1,0 +1,26 @@
+server:
+  port: 0
+spring:
+  application:
+    name: user-center
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+  datasource:
+    url: jdbc:mysql://rm-uf6m7500g66x1ms64eo.mysql.rds.aliyuncs.com:3306/user-center
+    hikari:
+      username: wanghuanle
+      password: wanghuanle
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
